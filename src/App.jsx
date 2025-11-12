@@ -1,14 +1,14 @@
+// src/App.jsx
+
 import React from 'react';
 import HeroSection from './components/HeroSection';
-// Nanti kita juga impor Navbar, AboutMe, dll di sini
+import AboutMe from './components/AboutMe'; // <- Impor komponen baru
 
 function App() {
-  // Kita gunakan ES6 fragment (<>...</>)
   return (
     <>
-      {/* <Navbar /> */}
       <HeroSection />
-      {/* <AboutMe /> */}
+      <AboutMe />
       {/* <Skills /> */}
       {/* <Experience /> */}
       {/* <ContactForm /> */}
