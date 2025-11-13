@@ -1,5 +1,3 @@
-// src/components/AboutMe.jsx
-
 import React from 'react';
 import { 
   FaUser, 
@@ -10,9 +8,7 @@ import {
   FaFlag 
 } from 'react-icons/fa';
 
-import ProfileImage from '../assets/foto-profil.jpg'; // (Asumsi Anda tetap pakai 'import')
-// Jika Anda pakai 'public' untuk foto, baris di atas dihapus dan <img> src="/foto-profil.jpg"
-
+import ProfileImage from '../assets/foto-profil.jpg'; 
 const AboutMe = () => {
   return (
     <section className="bg-white py-20 px-6">
@@ -26,18 +22,17 @@ const AboutMe = () => {
 
         <div className="flex flex-col md:flex-row items-start gap-12">
           
-          {/* Kolom Kiri: Foto */}
+          
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80">
               <img 
-                src={ProfileImage} // atau "/foto-profil.jpg" jika di 'public'
+                src={ProfileImage}
                 alt="Foto Profil Dave Jordy" 
                 className="w-full h-full object-cover rounded-2xl shadow-xl" 
               />
             </div>
           </div>
 
-          {/* Kolom Kanan: Teks & Info (Data Anda) */}
           <div className="w-full md:w-2/3">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Hello There!
@@ -54,24 +49,15 @@ const AboutMe = () => {
               <InfoItem icon={<FaFlag />} label="Status" value="On Duty" />
             </div>
 
-            {/* === PERUBAHAN DI SINI === */}
             <div className="flex items-center gap-4">
-              {/* Kita ubah <button> menjadi <a> (tautan).
-                - 'href' : Path ke file CV di folder 'public'.
-                - 'download' : Atribut ini menyuruh browser untuk men-download file, 
-                              bukan membukanya di tab baru.
-                - 'className' : Kita pakai styling Tailwind yang sama persis 
-                               dengan <button> sebelumnya.
-              */}
               <a 
-                href="/CV-Dave-Jordy.pdf" // <-- PASTIKAN NAMA FILE SAMA
-                download="CV - Gerungan Dave.pdf" // <-- Nama file saat di-download
+                href="/CV-Dave-Jordy.pdf" 
+                download="CV - Gerungan Dave.pdf" 
                 className="px-6 py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-900 transition-colors"
               >
                 Download My CV
               </a>
             </div>
-            {/* === AKHIR PERUBAHAN === */}
 
           </div>
         </div>
@@ -80,7 +66,6 @@ const AboutMe = () => {
   );
 };
 
-// Komponen helper (tetap sama)
 const InfoItem = ({ icon, label, value }) => (
   <div className="flex items-start gap-3">
     <span className="text-blue-600 text-xl mt-1">{icon}</span>
