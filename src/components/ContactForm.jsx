@@ -110,7 +110,6 @@ const ContactForm = () => {
   );
 };
 
-// Komponen helper untuk link sosial
 const SocialLink = ({ icon, label, user, url }) => (
   <a 
     href={url} 

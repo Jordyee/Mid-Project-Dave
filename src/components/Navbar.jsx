@@ -1,5 +1,4 @@
 import React from 'react';
-// Impor 'Link' supaya smooth
 import { Link } from 'react-scroll';
 // Impor ikon
 import { 
@@ -13,8 +12,6 @@ import {
 const Navbar = () => {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-      
-      {/* Wrapper Kapsul */}
       <div className="flex items-center gap-2 px-4 py-3 bg-white/80 backdrop-blur-md rounded-full shadow-lg">
     
         <Link

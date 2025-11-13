@@ -1,7 +1,5 @@
-// src/components/AboutMe.jsx
-
-import React, { useState, useEffect } from 'react'; // Diperbarui
-import axios from 'axios'; // Diperbarui
+import React, { useState, useEffect } from 'react'; 
+import axios from 'axios'; 
 import { 
   FaUser, 
   FaGraduationCap, 
@@ -10,9 +8,8 @@ import {
   FaMapMarkerAlt, 
   FaFlag 
 } from 'react-icons/fa';
-import ProfileImage from '../assets/foto-profil.jpg'; // (atau /foto-profil.jpg)
+import ProfileImage from '../assets/foto-profil.jpg'; 
 
-// Pindahkan InfoItem ke atas agar bisa diakses
 const InfoItem = ({ icon, label, value }) => (
   <div className="flex items-start gap-3">
     <span className="text-blue-600 text-xl mt-1">{icon}</span>
@@ -23,7 +20,6 @@ const InfoItem = ({ icon, label, value }) => (
   </div>
 );
 
-// Mapping ikon manual (karena JSON tidak bisa menyimpan komponen JSX)
 const iconMap = {
   "Nama": <FaUser />,
   "Domisili": <FaMapMarkerAlt />,
@@ -85,15 +81,14 @@ const AboutMe = () => {
               Hello There!
             </h3>
             <p className="text-gray-600 mb-6">
-              {aboutData.description} {/* <-- Data dari JSON */}
+              {aboutData.description} 
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              {/* Mapping data InfoGrid dari JSON */}
               {aboutData.infoGrid.map((item) => (
                 <InfoItem 
                   key={item.label}
-                  icon={iconMap[item.label]} // Ambil ikon dari mapping
+                  icon={iconMap[item.label]} 
                   label={item.label} 
                   value={item.value} 
                 />

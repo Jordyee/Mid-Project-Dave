@@ -1,34 +1,29 @@
-// src/components/HeroSection.jsx
-
-import React, { useState, useEffect } from 'react'; // Diperbarui
-import axios from 'axios'; // Diperbarui
+import React, { useState, useEffect } from 'react'; 
+import axios from 'axios'; 
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { Link } from 'react-scroll'; 
-import ProfileImage from '../assets/foto-profil.jpg'; // (atau /foto-profil.jpg)
+import ProfileImage from '../assets/foto-profil.jpg';
 import ContactModal from './ContactModal.jsx'; 
 
 const HeroSection = ({ onOpenModal }) => { 
   
-  // State untuk menampung data dari db.json
   const [heroData, setHeroData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // useEffect untuk fetch data dengan axios saat komponen dimuat
   useEffect(() => {
     axios.get('/db.json')
       .then(response => {
-        setHeroData(response.data.hero); // Simpan data hero ke state
-        setLoading(false); // Matikan loading
+        setHeroData(response.data.hero); 
+        setLoading(false); 
       })
       .catch(error => {
         console.error("Error fetching hero data:", error);
         setLoading(false);
       });
-  }, []); // [] berarti 'jalankan sekali saat mount'
+  }, []);
 
-  // Tampilkan loading state
   if (loading) {
     return (
       <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -37,7 +32,6 @@ const HeroSection = ({ onOpenModal }) => {
     );
   }
 
-  // Tampilkan jika data gagal diambil
   if (!heroData) {
     return (
       <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -46,7 +40,6 @@ const HeroSection = ({ onOpenModal }) => {
     );
   }
 
-  // Render komponen dengan data dari state
   return (
     <section id="hero" className="min-h-screen flex items-center bg-gray-50 p-6 md:p-12">
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">
@@ -54,7 +47,7 @@ const HeroSection = ({ onOpenModal }) => {
         <div className="flex-1 text-center md:text-left">
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            {heroData.name} {/* <-- Data dari JSON */}
+            {heroData.name} 
           </h1>
 
           <div className="text-2xl md:text-3xl font-semibold text-blue-600 mb-6 min-h-[40px]">
@@ -67,7 +60,7 @@ const HeroSection = ({ onOpenModal }) => {
           </div>
 
           <p className="text-gray-600 mb-4 max-w-lg mx-auto md:mx-0">
-            {heroData.description} {/* <-- Data dari JSON */}
+            {heroData.description} 
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 mb-8">
@@ -76,15 +69,14 @@ const HeroSection = ({ onOpenModal }) => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
               </span>
-              {heroData.status} {/* <-- Data dari JSON */}
+              {heroData.status} 
             </div>
             <div className="flex items-center gap-1 text-gray-500">
               <HiOutlineLocationMarker />
-              {heroData.location} {/* <-- Data dari JSON */}
+              {heroData.location} 
             </div>
           </div>
 
-          {/* ... (Tombol dan Link Sosial Media tetap sama) ... */}
           <div className="flex items-center justify-center md:justify-start gap-4 mb-8">
             <Link 
               to="experience" 

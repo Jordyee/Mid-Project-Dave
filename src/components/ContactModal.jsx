@@ -1,19 +1,17 @@
 import React from 'react';
-import { FaTimes } from 'react-icons/fa'; // Ikon 'X' untuk menutup
+import { FaTimes } from 'react-icons/fa';
 
 const ContactModal = ({ isOpen, onClose }) => {
 
-  // Jika 'isOpen' adalah false, jangan render apa-apa
   if (!isOpen) return null;
 
   const handleSubmit = (event) => {
     event.preventDefault();
     alert('Formulir terkirim! (Fungsi placeholder)');
-    onClose(); // Tutup modal setelah submit
+    onClose();
   };
 
   return (
-    // Latar belakang overlay (gelap transparan)
     <div 
       onClick={onClose} 
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"

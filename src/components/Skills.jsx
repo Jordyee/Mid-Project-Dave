@@ -1,10 +1,7 @@
-// src/components/Skills.jsx
-
-import React, { useState, useEffect } from 'react'; // Diperbarui
-import axios from 'axios'; // Diperbarui
+import React, { useState, useEffect } from 'react'; 
+import axios from 'axios'; 
 import { FaCode, FaLaptopCode, FaDatabase, FaTools } from 'react-icons/fa';
 
-// Komponen SkillItem (tidak berubah)
 const SkillItem = ({ name, level }) => (
   <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
     <div className="flex justify-between items-center mb-1">
@@ -25,7 +22,6 @@ const SkillItem = ({ name, level }) => (
 const Skills = () => {
   const [activeTab, setActiveTab] = useState('programming');
 
-  // State untuk data
   const [skillData, setSkillData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -76,11 +72,9 @@ const Skills = () => {
 
         <div className="bg-white p-6 rounded-lg shadow-lg">
           
-          {/* Tampilkan loading atau error */}
           {loading && <p className="text-center">Loading skills...</p>}
           {!loading && !skillData && <p className="text-center">Failed to load data.</p>}
 
-          {/* Render data dari state (JSON) */}
           {!loading && skillData && (
             <>
               {activeTab === 'programming' && (

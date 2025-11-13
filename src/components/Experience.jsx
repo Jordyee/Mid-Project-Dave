@@ -1,10 +1,7 @@
-// src/components/Experience.jsx
-
-import React, { useState, useEffect } from 'react'; // Diperbarui
-import axios from 'axios'; // Diperbarui
+import React, { useState, useEffect } from 'react'; 
+import axios from 'axios'; 
 import { FaBriefcase, FaGraduationCap, FaTrophy } from 'react-icons/fa';
 
-// Komponen TimelineItem (tidak berubah)
 const TimelineItem = ({ title, company, date, description, tags }) => (
   <div className="relative pl-12">
     <div className="absolute left-0 top-1.5 w-5 h-5 bg-blue-600 rounded-full border-4 border-white"></div>
@@ -85,11 +82,9 @@ const Experience = () => {
         <div className="relative">
           <div className="absolute left-4 top-0 h-full w-0.5 bg-gray-300"></div>
           
-          {/* Tampilkan loading atau error */}
           {loading && <p className="text-center">Loading experience...</p>}
           {!loading && !expData && <p className="text-center">Failed to load data.</p>}
           
-          {/* Render data dari state (JSON) */}
           {!loading && expData && (
             <>
               {activeTab === 'work' && (
