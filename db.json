@@ -1,13 +1,136 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
+  "hero": {
+    "name": "Hi, I'm Gerungan Dave",
+    "titles": [
+      "Frontend Student",
+      2000,
+      "Voice Of Computer Science",
+      2000,
+      "Mahasiswa Informatika",
+      2000,
+      "EXP/MID/GOLD LANER",
+      2000,
+      "Lapu-Lapu, Kimmy, Brody",
+      2000
+    ],
+    "description": "Saya adalah seorang mahasiswa yang memiliki pengalaman yang cukup dalam melakukan prompt dan vibe coding",
+    "status": "Active as Student",
+    "location": "Universitas Klabat"
+  },
+  "about": {
+    "description": "Saya adalah mahasiswa Teknik Informatika di Universitas Klabat",
+    "infoGrid": [
+      { "label": "Nama", "value": "Dave J Gerungan" },
+      { "label": "Domisili", "value": "Aermadidi" },
+      { "label": "Pendidikan", "value": "SMA" },
+      { "label": "Email", "value": "12410535@student.unklab.ac.id" },
+      { "label": "Phone", "value": "081341044334" },
+      { "label": "Status", "value": "On Duty" }
+    ]
+  },
+  "experience": {
+    "work": [
+      {
+        "title": "Wakil Ketua VOCS",
+        "company": "Voice of Computer Science",
+        "date": "July 2025 - Sekarang",
+        "description": [
+          "Saya dipercayakan untuk Menjadi Ketua Pelayanan Tahun 2024",
+          "Saya Kembali dipercayakan sebagai Section Leader Tenor",
+          "Akhirnya saya diangkat menjadi Wakil ketua vocs"
+        ],
+        "tags": ["Leadership", "Management", "Music"]
+      },
+      {
+        "title": "Ketua Pelayanan VOCS",
+        "company": "VOCS",
+        "date": "Desember 2024 - Juny 2025",
+        "description": [
+          "Membantu Melakukan persiapan serta management pelayanan",
+          "Mengontrol sepenuhnya alur perjalanan dan pelayanan"
+        ],
+        "tags": ["Event Planning", "Logistics"]
+      },
+      {
+        "title": "Panitia FILKOM Day (Divisi Perlengkapan)",
+        "company": "FILKOM UNKLAB",
+        "date": "2024",
+        "description": [
+          "Me-manage perlengkapan acara FILKOM Day",
+          "Menyesuaikan anggaran dana untuk setiap vendor yang dibutuhkan"
+        ],
+        "tags": ["Event Committee", "Logistics", "Budgeting"]
+      },
+      {
+        "title": "President Penamatan",
+        "company": "Sekolah Lanjutan Advent Tompaso",
+        "date": "2021",
+        "description": [
+          "Melakukan managing terhadap setiap acara penamatan",
+          "Mengelola acara yang diadakan selama 3 hari berturut-turut"
+        ],
+        "tags": ["Event Management", "Leadership", "Coordination"]
+      }
+    ],
+    "education": [
+      {
+        "title": "Sekolah Menengah Atas (SMA)",
+        "company": "SLA Tompaso",
+        "date": "2018 - 2021",
+        "description": [],
+        "tags": ["High School"]
+      },
+      {
+        "title": "Sekolah Menengah Pertama (SMP)",
+        "company": "SLA Tompaso",
+        "date": "2015 - 2018",
+        "description": [],
+        "tags": ["Middle School"]
+      },
+      {
+        "title": "Sekolah Dasar (SD)",
+        "company": "TK SD SMP Advent Rerer",
+        "date": "2009 - 2015",
+        "description": [],
+        "tags": ["Elementary"]
+      },
+      {
+        "title": "Taman Kanak-Kanak (TK)",
+        "company": "TK SD SMP Advent Rerer",
+        "date": "2008 - 2009",
+        "description": [],
+        "tags": ["Kindergarten"]
+      }
+    ],
+    "achievements": []
+  },
+  "skills": {
+    "programming": [
+      { "name": "JavaScript", "level": "80%" },
+      { "name": "Python", "level": "90%" },
+      { "name": "DEV C++", "level": "65%" }
+    ],
+    "frontend": [
+      { "name": "React.js", "level": "95%" },
+      { "name": "VITE", "level": "90%" },
+      { "name": "Vue.js", "level": "80%" },
+      { "name": "HTML5", "level": "95%" },
+      { "name": "CSS3", "level": "90%" },
+      { "name": "Tailwind CSS", "level": "95%" },
+      { "name": "Bootstrap", "level": "85%" }
+    ],
+    "game": [
+      { "name": "Mobile Legend", "level": "92%" },
+      { "name": "Free Fire", "level": "85%" },
+      { "name": "VALORANT", "level": "75%" }
+    ],
+    "tools": [
+      { "name": "Git", "level": "90%" },
+      { "name": "GitHub", "level": "90%" },
+      { "name": "VS Code", "level": "95%" },
+      { "name": "Gemini", "level": "98%" },
+      { "name": "ChatGPT", "level": "96%" },
+      { "name": "MySQL", "level": "70%" }
+    ]
   }
 }

@@ -5,11 +5,7 @@ const Footer = ({ onOpenModal }) => {
   return (
     <footer className="bg-gray-800 text-gray-300 pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
-        
-        {/* Kontainer 4 Kolom */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          
-          {/* ... (Kolom 1: Portfolio (Brand) - tetap sama) ... */}
            <div>
             <h4 className="text-2xl font-bold text-white mb-4">Jordyee.dev</h4>
             <p className="text-gray-400 mb-4">
@@ -23,7 +19,6 @@ const Footer = ({ onOpenModal }) => {
             </div>
           </div>
 
-          {/* ... (Kolom 2: Quick Links - tetap sama) ... */}
           <div>
             <h5 className="text-lg font-semibold text-white mb-4">Quick Links</h5>
             <ul className="space-y-2">
@@ -35,15 +30,13 @@ const Footer = ({ onOpenModal }) => {
             </ul>
           </div>
 
-
-          {/* Kolom 3: Get In Touch */}
           <div>
             <h5 className="text-lg font-semibold text-white mb-4">Get In Touch</h5>
             <ul className="space-y-2 text-gray-400">
-              <li>info@emailanda.com</li>
-              <li>+62 812-3456-7890</li>
+              <li>gerungan.dj@gmail.com</li>
+              <li>+62 813-4104-4334</li>
             </ul>
-            {/* Tambahkan 'onClick={onOpenModal}' pada tombol ini */}
+
             <button 
               onClick={onOpenModal}
               className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
@@ -52,7 +45,6 @@ const Footer = ({ onOpenModal }) => {
             </button>
           </div>
 
-          {/* ... (Kolom 4: Newsletter - tetap sama) ... */}
            <div>
             <h5 className="text-lg font-semibold text-white mb-4">Stay Updated</h5>
             <p className="text-gray-400 mb-4">
