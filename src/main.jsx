@@ -1,10 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx'; // Pastikan ini juga sudah ada .jsx
+import './index.css';
+
+// Baris import RestAPI sudah HILANG DARI SINI
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>,
+);
